@@ -35,6 +35,21 @@ function inverseNumber() {
     calculator.displayNumber = calculator.displayNumber * -1;
 }
 
+//fungsi untuk menetapkan sebuah operator
+function handleOperator(operator) {
+    if (calculator.isWaitForSecondNumber) {
+        calculator.operator = operator;
+        calculator.isWaitForSecondNumber = true;
+        calculator.firstNumber = calculator.displayNumber;
+
+        //mengatur ulang niali display number supaya tombol selanjutnya mulai dari angka pertama lagi
+        calculator.displayNumber = '0';
+    } else {
+        alert('Operator sudah ditetapkan')
+    }
+    
+}
+
 //variabel button
 const buttons = document.querySelectorAll(".button");
 
