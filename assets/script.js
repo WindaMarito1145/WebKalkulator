@@ -27,6 +27,14 @@ function inputDigit(digit) {
     }
 }
 
+//fungsi negative
+function inverseNumber() {
+    if (calculator.displayNumber === '0') {
+        return;
+    }
+    calculator.displayNumber = calculator.displayNumber * -1;
+}
+
 //variabel button
 const buttons = document.querySelectorAll(".button");
 
@@ -40,6 +48,11 @@ for (const button of buttons) {
         clearCalculator();
         updateDisplay();
         return;
+    }
+
+    if(target.classList.contains('negative')){
+        inverseNumber();
+        updateDisplay();
     }
     
     inputDigit(target.innerText);
