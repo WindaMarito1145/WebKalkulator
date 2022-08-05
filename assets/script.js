@@ -1,1 +1,1 @@
-alert("Hello Google !!");
+console.log("Selamat Anda berhasil menggunakan JavaScript");
