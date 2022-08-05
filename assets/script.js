@@ -59,10 +59,10 @@ function performCalculation() {
     
     let result = 0;
     if (calculator.operator === '+') {
-        result = parsenInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
+        result = parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
         
     } else {
-        result = parsenInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
+        result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
     }
 
     calculator.displayNumber = result;
