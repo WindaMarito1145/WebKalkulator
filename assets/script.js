@@ -53,6 +53,7 @@ for (const button of buttons) {
     if(target.classList.contains('negative')){
         inverseNumber();
         updateDisplay();
+        return;
     }
     
     inputDigit(target.innerText);
