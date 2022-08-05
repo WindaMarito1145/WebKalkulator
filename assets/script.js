@@ -96,7 +96,8 @@ for (const button of buttons) {
     }
 
     if (target.classList.contains('operator')) {
-        handleOperator(target.innerText)
+        handleOperator(target.innerText);
+        return;
     }
     
     inputDigit(target.innerText);
