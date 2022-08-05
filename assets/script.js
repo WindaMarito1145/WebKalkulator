@@ -88,6 +88,16 @@ for (const button of buttons) {
         updateDisplay();
         return;
     }
+
+    if(target.classList.contains('equals')){
+        performCalculation();
+        updateDisplay();
+        return;
+    }
+
+    if (target.classList.contains('operator')) {
+        handleOperator(target.innerText)
+    }
     
     inputDigit(target.innerText);
     updateDisplay();
