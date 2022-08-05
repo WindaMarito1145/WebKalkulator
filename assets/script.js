@@ -37,7 +37,7 @@ function inverseNumber() {
 
 //fungsi untuk menetapkan sebuah operator
 function handleOperator(operator) {
-    if (calculator.isWaitForSecondNumber) {
+    if (!calculator.isWaitForSecondNumber) {
         calculator.operator = operator;
         calculator.isWaitForSecondNumber = true;
         calculator.firstNumber = calculator.displayNumber;
