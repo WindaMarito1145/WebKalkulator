@@ -50,6 +50,24 @@ function handleOperator(operator) {
     
 }
 
+//fungsi untuk kalkulasi nilai
+function performCalculation() {
+    if (calculator.firstNumber == null || calculator.operator == null) {
+        alert('Anda Belum menetapkan operator');
+        return;
+    }
+    
+    let result = 0;
+    if (calculator.operator === '+') {
+        result = parsenInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
+        
+    } else {
+        result = parsenInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
+    }
+
+    calculator.displayNumber = result;
+}
+
 //variabel button
 const buttons = document.querySelectorAll(".button");
 
