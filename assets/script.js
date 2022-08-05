@@ -20,7 +20,11 @@ function clearCalculator() {
 
 //fungsi memasukan angka
 function inputDigit(digit) {
-    calculator.displayNumber += digit;
+    if (calculator.displayNumber === '0') {
+        calculator.displayNumber = digit;
+    }else{
+        calculator.displayNumber += digit;
+    }
 }
 
 //variabel button
@@ -31,6 +35,12 @@ for (const button of buttons) {
     
     //mendapatkan objek elemen yang di klik
     const target = event.target;
+
+    if(target.classList.contains('clear')){
+        clearCalculator();
+        updateDisplay();
+        return;
+    }
     
     inputDigit(target.innerText);
     updateDisplay();
